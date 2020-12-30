@@ -1,95 +1,8 @@
 /*
-Heavily modified version of
+My starting point was
 https://github.com/markdowncss/modest/blob/master/css/modest.css
 */
-
-pre,code,textarea {
-  font-family: Menlo, Monaco, "Courier New", monospace;
-}
-
-pre {
-  padding: .5rem;
-  line-height: 1.25;
-  overflow-x: scroll;
-}
-
-a,
-a:visited {
-  color: #3498db;
-}
-
-a:hover,
-a:focus,
-a:active {
-  color: #2980b9;
-}
-
-strong em, em strong {
-  font-weight: 800;
-  font-style: italic;
-}
-
-strong {
-  font-weight: 800;
-}
-
-em {k
-  font-weight: 400;
-  font-style: italic;
-}
-
-.modest-no-decoration {
-  text-decoration: none;
-}
-
-html {
-  font-size: 12px;
-}
-
-body {
-  line-height: 1.85;
-}
-
-p, ol, ul {
-  font-size: 1rem;
-  margin-bottom: 0.8rem;
-}
-
-h1, h2, h3, h4 {
-  margin-top: 0;
-  font-weight: inherit;
-}
-
-h1 { font-size: 1.6rem; }
-
-h2 { font-size: 1.4rem; }
-
-h3 { font-size: 1.3rem; }
-
-h4 { font-size: 1.2rem; }
-
-h5 { font-size: 1.1rem; }
-
-h6 { font-size: 1rem; }
-
-small {
-  font-size: .707em;
-}
-
-/* https://github.com/mrmrs/fluidity */
-
-img,
-canvas,
-iframe,
-video,
-svg,
-select,
-textarea {
-  max-width: 100%;
-}
-
 @import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700);
-
 @import url(http://fonts.googleapis.com/css?family=Arimo:700,700italic);
 
 html {
@@ -105,14 +18,57 @@ body {
   line-height: 1.1;
 }
 
+a, a:visited {
+  color: #3498db;
+}
+
+a:hover, a:focus, a:active {
+  color: #2980b9;
+}
+
+strong em, em strong {
+  font-weight: 800;
+  font-style: italic;
+}
+
+strong {
+  font-weight: 800;
+}
+
+em {
+  font-weight: 400;
+  font-style: italic;
+}
+
+small {
+  font-size: .707em;
+}
+
+p, ol, ul {
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+h1 { font-size: 1.6rem; }
+h2 { font-size: 1.4rem; }
+h3 { font-size: 1.3rem; }
+h4 { font-size: 1.2rem; }
+h5 { font-size: 1.1rem; }
+h6 { font-size: 1.0rem; }
+
 h1,h2,h3,h4,h5,h6 {
   font-family: Arimo, Helvetica, sans-serif;
   font-weight: 400;
+  margin-top: 0;
 }
 
 h1,h2,h3 {
   border-bottom: 2px solid #eee;
   margin-bottom: 8px;
+}
+
+img, canvas, iframe, video, svg, select, textarea {
+  max-width: 100%;
 }
 
 blockquote {
@@ -122,22 +78,23 @@ blockquote {
 
 pre,code,textarea {
   background-color: #eee;
+  font-family: Menlo, Monaco, "Courier New", monospace;
 }
 
-li p {
-  margin: .1rem;
+pre {
+  padding: .5rem;
+  line-height: 1.25;
+  overflow-x: scroll;
 }
 
-li.task-list-item {
-}
-li.completed-task {
-  color: #aaa;
-  text-decoration: line-through;
-}
 ol, ul {
   padding-left: 24px;
 }
 
 li {
-  margin: 0; padding: 0;
+  margin: .1rem; padding: 0;
+}
+li.completed-task {
+  color: #aaa;
+  text-decoration: line-through;
 }
