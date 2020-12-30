@@ -12,7 +12,7 @@ html {
 
 body {
   color: #444;
-  font-family: /*'Open Sans Condensed', */sans-serif;
+  font-family: sans-serif;
   font-weight: 300;
   max-width: 48rem;
   line-height: 1.1;
@@ -57,7 +57,7 @@ h5 { font-size: 1.1rem; }
 h6 { font-size: 1.0rem; }
 
 h1,h2,h3,h4,h5,h6 {
-  font-family: Arimo, Helvetica, sans-serif;
+  font-family: 'Open Sans Condensed', Arimo, Helvetica, sans-serif;
   font-weight: 400;
   margin-top: 0;
 }
