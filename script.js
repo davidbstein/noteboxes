@@ -1,6 +1,7 @@
-if (BACKEND == undefined) {
+var BACKEND;
+if (window.BACKEND == undefined) {
   console.log("window.localStorage.setItem('BACKEND', <the secret url>)'");
-  BACKEND = localStorage.getItem("BACKEND");
+  var BACKEND = localStorage.getItem("BACKEND");
 }
 
 const DATA={};
