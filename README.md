@@ -22,4 +22,5 @@ To enable a browser, I use a bookmarklet:
 ```
 javascript:window.localStorage.setItem('BACKEND', <BACKEND URL>)
 ```
-Since my browser syncs by bookmarks, this is an easy way to give a computer access.
+Since my browser syncs my bookmarks, this is an easy way to give a computer access.
+
