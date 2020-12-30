@@ -1,6 +1,7 @@
 body {
   word-break: break-word;
   background: #eef6ff;
+  overflow: -moz-scrollbars-none; 
 }
 
 .hidden {
@@ -54,3 +55,9 @@ textarea {
   color: #aaa;
   font-size: .750rem;
 }
+
+::-webkit-scrollbar {
+display: none;
+}
+
+
