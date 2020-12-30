@@ -1,5 +1,7 @@
 # noteboxes
-A notetaking / todo list app that gets everything onto the screen if it can. Because scrolling around a TODO list is frustrating, and kanban is WAY too much overhead.
+Because scrolling around a TODO list is frustrating, and kanban is WAY too much overhead.
+
+A notetaking / todo list app that gets everything onto the screen if it can. 
 
 # Setup
 1. copy `backend.gs` into a new project on script.google.com; deploy as webapp, global permissions.
