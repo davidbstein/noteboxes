@@ -98,3 +98,7 @@ li.completed-task {
   color: #aaa;
   text-decoration: line-through;
 }
+li.incomplete-task {
+    color: #444;
+    text-decoration: none;
+}
