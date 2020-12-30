@@ -20,30 +20,10 @@ function getNotes(){
   })
 }
 
-function test(){
-  testNotes()
-  testContent()
-  testProps()
-}
-
-function testContent(){
-  Logger.log("content", getProps().getProperty('content'))
-}
-
-function testNotes(){
-  const val = getNotes();
-  Logger.log("notes", JSON.stringify(val));
-}
-
-function testProps(){
-  Logger.log("props", JSON.stringify(getProps().getProperties()))
-}
-
 /* DANGER ZONE
 function clearProps(){
   getProps().deleteAllProperties();
   initProps()
-  test()
 }
 
 function initProps(){
