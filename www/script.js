@@ -1,3 +1,8 @@
+if (!BACKEND) {
+  console.log("window.localStorage.setItem('BACKEND', <the secret url>)'");
+  BACKEND = localStorage.getItem("BACKEND");
+}
+
 const DATA={};
 const MD = new showdown.Converter({
   backslashEscapesHTMLTags: false,
@@ -41,6 +46,7 @@ function redraw(){
       (note) => `<div class="note" id="note-${note.id}" note-id=${note.id}>
           <div class="edit-view hidden"><textarea>${note.content}</textarea></div>
           <div class="content">${MD.makeHtml(note.content)}</div>
+          <div class='note-id-box'>${note.id}</div>
         </div>`).join('')
     +"<button id='addnote' onclick=addNote()>Add Note</button>"
     );
@@ -99,6 +105,7 @@ function render(target, content){
   target.innerHTML = MD.makeHtml(content);
 }
 
+console.log("use `save_order([1,3,2,4,5]) to order cards")
 async function save_order(id_list){
   await post_data("note_ids", JSON.stringify(id_list))
 }

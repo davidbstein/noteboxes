@@ -1,5 +1,6 @@
 body {
   word-break: break-word;
+  background: #eef6ff;
 }
 
 .hidden {
@@ -16,6 +17,7 @@ body {
 }
 
 .note {
+  background:white;
   width: 300px;
   border: 1px solid #ccc;
   margin: 8px;
@@ -24,6 +26,7 @@ body {
   display: grid;
   overflow: scroll;
   padding: 8px;
+  position:relative;
 }
 #addnote {
   width: 100vw;
@@ -40,3 +43,4 @@ textarea {
   font-size: 1rem;
   font-weight: 100;
 }
+.note-id-box{position: absolute;bottom: 0;right:0;padding: 2px 4px;color: #aaa;font-size: .750rem;}

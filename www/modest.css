@@ -24,6 +24,20 @@ a:active {
   color: #2980b9;
 }
 
+strong em, em strong {
+  font-weight: 800;
+  font-style: italic;
+}
+
+strong {
+  font-weight: 800;
+}
+
+em {k
+  font-weight: 400;
+  font-style: italic;
+}
+
 .modest-no-decoration {
   text-decoration: none;
 }
