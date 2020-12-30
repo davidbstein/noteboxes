@@ -58,9 +58,14 @@ function redraw(){
     ta.onblur = focusLossHandler.bind(this, el, ta);
     ta.oninput = typingHandler.bind(this, el, ta);
   }
+  cross_out_checked()
+}
+
+function cross_out_checked(){
   for (el of document.getElementsByTagName("input")){
-    if (el.type=="checkbox" && el.checked) {
-      el.parentElement.classList.add('completed-task')
+    if (el.type=="checkbox") {
+      if (el.checked) el.parentElement.classList.add('completed-task');
+      else el.parentElement.classList.add('incomplete-task');
     }
   }
 }
@@ -104,6 +109,7 @@ function archiveNote(){
 
 function render(target, content){
   target.innerHTML = MD.makeHtml(content);
+  cross_out_checked()
 }
 
 console.log("use `save_order([1,3,2,4,5]) to order cards")
