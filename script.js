@@ -137,12 +137,13 @@ async function get_notes(){
       params={
         method:"GET",
       }
-    ))).json()).notes
+    ))).json())
 }
 
 function reloadEverything(){
-  get_notes().then((notes)=>{
-    DATA.notes=notes;
+  get_notes().then((data)=>{
+    DATA.notes=data.notes;
+    _.pairs(temp1).map(([section, items]) => {return `${section}\n${items.map(([id, title])=>`\t${id} - ${title}`).join('\n')}`;}).join("\n") + `\nORDER\n\t${DATA.notes.map((e)=>e.id)}`
     redraw();
   });
 }
