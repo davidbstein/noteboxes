@@ -144,8 +144,11 @@ function reloadEverything(){
   get_notes().then((data)=>{
     DATA.notes=data.notes;
     DATA.id_chart = data.id_chart;
-    // magic console crap.
-    console.log(_.pairs(id_chart).map(([section, items]) => {return `${section}\n${items.map(([id, title])=>`\t${id} - ${title}`).join('\n')}`;}).join("\n") + `\nORDER\n\t${DATA.notes.map((e)=>e.id)}`)
+    printOrderToConsole();
     redraw();
   });
+}
+
+function printOrderToConsole(){
+  console.log(_.pairs(DATA.id_chart).map(([section, items]) => {return `${section}\n${items.map(([id, title])=>`\t${id} - ${title}`).join('\n')}`;}).join("\n") + `\nORDER\n\t${DATA.notes.map((e)=>e.id)}`)
 }
