@@ -143,7 +143,9 @@ async function get_notes(){
 function reloadEverything(){
   get_notes().then((data)=>{
     DATA.notes=data.notes;
-    _.pairs(temp1).map(([section, items]) => {return `${section}\n${items.map(([id, title])=>`\t${id} - ${title}`).join('\n')}`;}).join("\n") + `\nORDER\n\t${DATA.notes.map((e)=>e.id)}`
+    DATA.id_chart = data.id_chart;
+    // magic console crap.
+    console.log(_.pairs(id_chart).map(([section, items]) => {return `${section}\n${items.map(([id, title])=>`\t${id} - ${title}`).join('\n')}`;}).join("\n") + `\nORDER\n\t${DATA.notes.map((e)=>e.id)}`)
     redraw();
   });
 }
